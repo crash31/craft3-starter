@@ -5,6 +5,7 @@
 - Configure `MIX_PROXY_URL` to your development url
 - Clone repository and run `./craft setup`. If you ge error run `chmod +x ./craft`
 - When setup has completed, log in, go to setting -> plugins and install the Mix plugin. Go to Mix settings and change the public path setting to `public`. 
+- Everything in the root of the `templates` folder should start with an underscore, including folders. This prevents craft rendering files if a url matches the filename. 
 
 # External Services
 Before starting the project it is good to find out if we are hosting the website or not, this has impact on if we configure the following services. 
