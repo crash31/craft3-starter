@@ -31,6 +31,7 @@ Your tailwind config file should be `in addition to` and not `replicating` tailw
 
 # Budy config (buddy.crash31.com)
 **Sync Files Action**
+
 Set ignore paths based on project requirements. A good default:
 ```
 /.git/
