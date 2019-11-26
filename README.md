@@ -28,3 +28,24 @@ In a project repository, if you add to the config file, be sure to update the .e
 
 # Tailwind.config.js
 Your tailwind config file should be `in addition to` and not `replicating` tailwind's defaults. Your goal should be for any developer entering your project to be able to rely on tailwind's official doc, utilize any of the default classes, and know what additional classes are available by skimming your config file. 
+
+# Budy config (buddy.crash31.com)
+**Sync Files Action**
+Set ignore paths based on project requirements. A good default:
+```
+/.git/
+.env
+/vendor/
+/public/.htaccess
+/public/imager/
+/public/content/
+/storage/
+/node_modules/
+```
+**SSH Commands**
+```
+composer7.3-sp install
+./craft project-config/sync
+yarn install
+yarn run prod
+```
