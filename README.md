@@ -26,10 +26,31 @@ Everything from machine specific configurations to sensitive details should live
 
 In a project repository, if you add to the config file, be sure to update the .env.example file as well. 
 
+# Standard Plugins
+These are the Craft CMS Plugins that we use on every project:
+- 
+
 # Tailwind.config.js
 Your tailwind config file should be `in addition to` and not `replicating` tailwind's defaults. Your goal should be for any developer entering your project to be able to rely on tailwind's official doc, utilize any of the default classes, and know what additional classes are available by skimming your config file. 
 
-# Budy config (buddy.crash31.com)
+[TailwindCss Docs](https://tailwindcss.com/docs/installation/)
+
+## Tools for an optimal frontend
+
+[Type-Scale](https://type-scale.com/) is a great tool for laying out the scale of your typography.
+
+[Color Shades Generator](https://javisperez.github.io/tailwindcolorshades/#/) will layout a gradient of colors legible for Tailwind's config file.
+
+# Alpine.js
+[Documentation](https://github.com/alpinejs/alpine)
+
+Alpine.js offers you the reactive and declarative nature of big frameworks like Vue or React at a much lower cost.
+
+You get to keep your DOM, and sprinkle in behavior as you see fit.
+
+Think of it like Tailwind for JavaScript.
+
+# Buddy config (buddy.crash31.com)
 **Sync Files Action**
 
 Set ignore paths based on project requirements. A good default:
