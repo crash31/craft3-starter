@@ -28,7 +28,11 @@ In a project repository, if you add to the config file, be sure to update the .e
 
 # Standard Plugins
 These are the Craft CMS Plugins that we use on every project:
--
+
+*Free:*
+- [Redactor](https://imperavi.com/redactor/)
+- [Mix](https://github.com/mister-bk/craft-plugin-mix/blob/master/README.md)
+- [Typed Link Field](https://plugins.craftcms.com/typedlinkfield)
 
 # Tailwind.config.js
 Your tailwind config file should be `in addition to` and not `replicating` tailwind's defaults. Your goal should be for any developer entering your project to be able to rely on tailwind's official doc, utilize any of the default classes, and know what additional classes are available by skimming your config file. 
