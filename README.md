@@ -1,4 +1,11 @@
 # Craft 3 Starter Kit
+Getting started with a fresh new project.
+
+- Clone repo `git clone https://github.com/crash31/craft3-starter project-name`
+- Go into the new project folder and remove old git info `cd project-name && rm -rf .git`
+- Initialize a fresh git repo on project `git init`
+- Install backend dependencies `composer install`
+- Install frontend dependencies `npm install` or `yarn install`
 
 # Setup notes
 - Copy `.env.example` to `.env`
