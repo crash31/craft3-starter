@@ -1,1 +1,3 @@
-import 'alpinejs'
+import "alpinejs";
+import "./lazy";
+import "./picturefill";
