@@ -2,7 +2,7 @@
 	"require": {
 		"aelvan/imager": "v2.3.1",
 		"aelvan/imager-do-spaces-driver": "1.0.0",
-		"craftcms/cms": "^3.4.5",
+		"craftcms/cms": "^3.4.1",
 		"craftcms/redactor": "2.5.0",
 		"misterbk/mix": "1.5.2",
 		"mmikkel/cp-field-inspect": "1.0.7",
