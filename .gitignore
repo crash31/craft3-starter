@@ -3,6 +3,9 @@
 /vendor
 .DS_Store
 /public/assets
+/composer.lock
+/package-lock.json
+/yarn.lock
 
 
 # Created by https://www.gitignore.io/api/node,macos,windows
@@ -156,3 +159,4 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.gitignore.io/api/node,macos,windows
+*.lock

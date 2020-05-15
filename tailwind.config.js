@@ -1,7 +1,9 @@
 module.exports = {
-    theme: {
-      extend: {}
-    },
-    variants: {},
-    plugins: []
-}
+	// Overwrites theme elements
+	theme: {
+		// Adds to theme elements without overwriting them
+		extend: {},
+	},
+	variants: {},
+	plugins: [],
+};
