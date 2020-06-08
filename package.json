@@ -21,7 +21,7 @@
 		"yargs": "^4.6.0"
 	},
 	"dependencies": {
-		"alpinejs": "^1.9.5",
+		"alpinejs": "^2.3.5",
 		"file-loader": "^5.0.2",
 		"laravel-mix": "^5.0.0",
 		"laravel-mix-purgecss": "^4.2.0",
