@@ -1,0 +1,8 @@
+baseUrl: $DEFAULT_SITE_URL
+handle: default
+hasUrls: true
+language: en-US
+name: 'Craft Starter'
+primary: true
+siteGroup: 0de81e03-109e-43d0-ba3e-e12f24103134
+sortOrder: 1
