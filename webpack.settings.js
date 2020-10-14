@@ -25,7 +25,7 @@ module.exports = {
     urls: {
         live: "https://example.com/",
         local: "http://example.test/",
-        critical: "http://example.test/",
+        critical: "https://craft3-starter.test/",
         publicPath: () => process.env.PUBLIC_PATH || "/dist/",
     },
     vars: {

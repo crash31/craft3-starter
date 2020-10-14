@@ -1,10 +1,11 @@
 {
 	"require": {
-		"craftcms/cms": "^3.4.1",
+		"craftcms/cms": "3.5.12.1",
 		"craftcms/redactor": "2.5.0",
 		"misterbk/mix": "1.5.2",
 		"mmikkel/cp-field-inspect": "1.0.7",
 		"nystudio107/craft-seomatic": "3.2.41",
+		"nystudio107/craft-twigpack": "1.2.6",
 		"spacecatninja/imager-x": "^3.0",
 		"spacecatninja/imager-x-do-spaces-driver": "^2.0",
 		"spicyweb/craft-neo": "2.6.0",

@@ -1,4 +1,4 @@
-dateModified: 1597156867
+dateModified: 1602690719
 email:
   fromEmail: developer@gotobig.com
   fromName: 'Craft Starter'
@@ -8,7 +8,7 @@ graphql:
     enabled: false
     expiryDate: null
 plugins:
-  mix:
+  twigpack:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
@@ -16,7 +16,7 @@ system:
   edition: pro
   live: true
   name: 'Craft Starter'
-  schemaVersion: 3.5.12
+  schemaVersion: 3.5.13
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false

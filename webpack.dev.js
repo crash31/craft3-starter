@@ -15,71 +15,71 @@ const settings = require('./webpack.settings.js');
 
 // Configure the webpack-dev-server
 const configureDevServer = () => {
-  return {
-      public: settings.devServerConfig.public(),
-      contentBase: path.resolve(__dirname, settings.paths.templates),
-      host: settings.devServerConfig.host(),
-      port: settings.devServerConfig.port(),
-      https: !!parseInt(settings.devServerConfig.https()),
-      disableHostCheck: true,
-      hot: true,
-      overlay: true,
-      watchContentBase: true,
-      watchOptions: {
-          poll: !!parseInt(settings.devServerConfig.poll()),
-          ignored: /node_modules/,
-      },
-      headers: {
-          'Access-Control-Allow-Origin': '*'
-      },
-  };
+    return {
+        public: settings.devServerConfig.public(),
+        contentBase: path.resolve(__dirname, settings.paths.templates),
+        host: settings.devServerConfig.host(),
+        port: settings.devServerConfig.port(),
+        https: !!parseInt(settings.devServerConfig.https()),
+        disableHostCheck: true,
+        hot: true,
+        overlay: true,
+        watchContentBase: true,
+        watchOptions: {
+            poll: !!parseInt(settings.devServerConfig.poll()),
+            ignored: /node_modules/,
+        },
+        headers: {
+            'Access-Control-Allow-Origin': '*'
+        },
+    };
 };
 
 // Configure Image loader
 const configureImageLoader = () => {
-  return {
-      test: /\.(png|jpe?g|gif|svg|webp)$/i,
-      use: [
-          {
-              loader: 'file-loader',
-              options: {
-                  name: 'img/[name].[ext]'
-              }
-          }
-      ]
-  };
+    return {
+        test: /\.(png|jpe?g|gif|svg|webp)$/i,
+        use: [
+            {
+                loader: 'file-loader',
+                options: {
+                    name: 'img/[name].[ext]'
+                }
+            }
+        ]
+    };
 };
 
 // Configure the Postcss loader
 const configurePostcssLoader = () => {
-  return {
-      test: /\.(pcss|css)$/,
-      use: [
-          {
-              loader: 'style-loader',
-          },
-          {
-              loader: 'vue-style-loader',
-          },
-          {
-              loader: 'css-loader',
-              options: {
-                  url: false,
-                  importLoaders: 2,
-                  sourceMap: true
-              }
-          },
-          {
-              loader: 'resolve-url-loader'
-          },
-          {
-              loader: 'postcss-loader',
-              options: {
-                  sourceMap: true
-              }
-          }
-      ]
-  };
+    return {
+        test: /\.(pcss|css)$/,
+        use: [
+            {
+                loader: 'style-loader',
+            },
+            {
+                loader: 'vue-style-loader',
+            },
+            {
+                loader: 'css-loader',
+                options: {
+                    url: false,
+                    importLoaders: 2,
+                    sourceMap: true
+                }
+            },
+            {
+                loader: 'resolve-url-loader'
+            },
+            {
+                loader: 'postcss-loader',
+                options: {
+                    sourceMap: true
+                }
+            }
+        ]
+    };
 };
 
 // Development module exports

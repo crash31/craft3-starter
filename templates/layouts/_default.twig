@@ -3,6 +3,17 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!--# if expr="$HTTP_COOKIE=/critical\-css\=1/" -->
+            {{ craft.twigpack.includeCssModule("styles.css", false) }}
+        <!--# else -->
+            <script>
+                Cookie.set("critical-css", '1', { expires: "7D", secure: true });
+            </script>
+            {{ craft.twigpack.includeCriticalCssTags() }}
+
+            {{ craft.twigpack.includeCssModule("styles.css", true) }}
+        <!--# endif -->
         
     </head>
     <body>
@@ -10,12 +21,8 @@
             No Block Content Defined
         {% endblock %}
 
-        <!-- Browsers with ES module support load this file. -->
-        <script type="module" src="main.js"></script>
-
-        <!-- Older browsers load this file (and module-supporting -->
-        <!-- browsers know *not* to load this file). -->
-        <script nomodule src="main-legacy.js"></script>
+        {{ craft.twigpack.includeSafariNomoduleFix() }}
+        {{ craft.twigpack.includeJsModule("app.js", true) }}
         
     </body>
 </html>
