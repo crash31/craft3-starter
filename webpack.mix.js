@@ -1,8 +1,14 @@
 let mix = require("laravel-mix");
-let tailwind = require("tailwindcss");
+require('laravel-mix-workbox');
 
-mix.disableSuccessNotifications();
-mix.setPublicPath("public/assets");
+
+mix
+	.setPublicPath("public/assets")
+	.js("src/js/main.js", "js/main.js")
+	.postCss("src/css/main.css", "css")
+	.generateSW()
+	.extract()
+	.version();
 
 mix.browserSync({
 	proxy: process.env.MIX_PROXY_URL,
@@ -14,16 +20,3 @@ mix.browserSync({
 	],
 });
 
-mix
-	.options({
-		processCssUrls: false,
-		postCss: [
-			require("postcss-import"),
-			require("postcss-nested"),
-			tailwind(),
-			require("autoprefixer"),
-		],
-	})
-	.postCss("src/css/main.css", "css/main.css")
-	.js("src/js/main.js", "js/main.js")
-	.version();
