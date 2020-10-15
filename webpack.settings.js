@@ -6,7 +6,7 @@ require('dotenv').config();
 // Webpack settings exports
 // noinspection WebpackConfigHighlighting
 module.exports = {
-    name: "Example Project",
+    name: "Craft ",
     copyright: "Example Company, Inc.",
     paths: {
         src: {
@@ -20,11 +20,11 @@ module.exports = {
                 '**/*',
             ]
         },
-        templates: "./templates/"
+        templates: "./web/"
     },
     urls: {
         live: "https://example.com/",
-        local: "http://example.test/",
+        local: "https://craft3-starter.test/",
         critical: "https://craft3-starter.test/",
         publicPath: () => process.env.PUBLIC_PATH || "/dist/",
     },
@@ -32,7 +32,7 @@ module.exports = {
         cssName: "styles"
     },
     entries: {
-        "app": "app.js"
+        "app": "app.js",
     },
     babelLoaderConfig: {
         exclude: [
@@ -54,11 +54,31 @@ module.exports = {
         ampCriticalHeight: 19200,
         ampCriticalWidth: 600,
         pages: [
-            {
-                url: "",
-                template: "index"
-            }
-        ]
+                {
+                    url: "",
+                    template: "index"
+                },
+                {
+                    url: "",
+                    template: "amp_index"
+                },
+                {
+                    url: "errors/offline",
+                    template: "errors/offline"
+                },
+                {
+                    url: "errors/error",
+                    template: "errors/error"
+                },
+                {
+                    url: "errors/503",
+                    template: "errors/503"
+                },
+                {
+                    url: "errors/404",
+                    template: "errors/404"
+                }
+            ]
     },
     devServerConfig: {
         public: () => process.env.DEVSERVER_PUBLIC || "http://localhost:8080",
@@ -73,7 +93,7 @@ module.exports = {
     purgeCssConfig: {
         paths: [
             "./templates/**/*.{twig,html}",
-            "./src/vue/**/*.{vue,html}"
+            "./src/vue/**/*.{vue,html}",
         ],
         whitelist: [
             "./src/css/components/**/*.{css}"
@@ -95,21 +115,26 @@ module.exports = {
     createSymlinkConfig: [
         {
             origin: "img/favicons/favicon.ico",
-            symlink: "../favicon.ico"
+            symlink: "/favicon.ico"
         }
     ],
+    typescriptLoaderConfig: {
+        exclude: [
+            /(node_modules)/
+        ],
+    },
     webappConfig: {
         logo: "./src/img/favicon-src.png",
         prefix: "img/favicons/"
     },
     workboxConfig: {
-        swDest: "../sw.js",
+        swDest: "/sw.js",
         precacheManifestFilename: "js/precache-manifest.[manifestHash].js",
         importScripts: [
-            "/dist/js/workbox-catch-handler.js"
         ],
         exclude: [
             /\.(png|jpe?g|gif|svg|webp)$/i,
+            /\.mp3.*$/i,
             /\.map$/,
             /^manifest.*\\.js(?:on)?$/,
         ],
@@ -121,8 +146,17 @@ module.exports = {
         offlineGoogleAnalytics: true,
         runtimeCaching: [
             {
+                urlPattern: /\/admin.*$/i,
+                handler: "networkOnly"
+            },
+            // See "Serve cached audio and video" https://developers.google.com/web/tools/workbox/guides/advanced-recipes
+            {
+                urlPattern: /\.mp3.*$/i,
+                handler: "networkOnly"
+            },
+            {
                 urlPattern: /\.(?:png|jpg|jpeg|svg|webp)$/,
-                handler: "CacheFirst",
+                handler: "cacheFirst",
                 options: {
                     cacheName: "images",
                     expiration: {
