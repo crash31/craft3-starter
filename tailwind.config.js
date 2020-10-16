@@ -1,7 +1,6 @@
 module.exports = {
 	purge: {
-		folders: ["src", "templates"],
-		extensions: ["twig", "html", "js", "php", "vue"],
+		content: ['./templates/**/*.twig', './src/vue/**/*.vue']
 	},
 	// Overwrites theme elements
 	theme: {
