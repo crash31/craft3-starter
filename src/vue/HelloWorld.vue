@@ -1,6 +1,6 @@
 <template>
 <div>
-  <p>Vue is running.</p>
+  <p class="text-center text-green-500 font-bold tracking-wide">Vue is running!</p>
 </div>
 </template>
 

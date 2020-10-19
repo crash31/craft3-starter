@@ -3,6 +3,10 @@
 /vendor
 .DS_Store
 /public/assets
+/web/css
+/web/js
+/web/service-worker.js
+/web/service-worker.js.map
 /composer.lock
 /package-lock.json
 /yarn.lock

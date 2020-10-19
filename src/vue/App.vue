@@ -1,9 +1,3 @@
-<template>
-<div>
-  <hello-world />
-</div>
-</template>
-
 <script>
 // Async load the Vue 3 API
 import {
