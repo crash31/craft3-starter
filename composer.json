@@ -5,8 +5,6 @@
 		"misterbk/mix": "1.5.2",
 		"mmikkel/cp-field-inspect": "1.0.7",
 		"nystudio107/craft-seomatic": "3.2.41",
-		"spacecatninja/imager-x": "^3.0",
-		"spacecatninja/imager-x-do-spaces-driver": "^2.0",
 		"spicyweb/craft-neo": "2.6.0",
 		"vaersaagod/dospaces": "1.1.2",
 		"vlucas/phpdotenv": "^3.4.0"
@@ -20,7 +18,7 @@
 		"sort-packages": true,
 		"optimize-autoloader": true,
 		"platform": {
-			"php": "7.0"
+			"php": "7.4"
 		}
 	},
 	"scripts": {

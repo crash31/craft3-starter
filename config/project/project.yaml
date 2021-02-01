@@ -1,4 +1,4 @@
-dateModified: 1602863313
+dateModified: 1612207085
 email:
   fromEmail: developer@gotobig.com
   fromName: 'Craft Starter'
@@ -8,6 +8,14 @@ graphql:
     enabled: false
     expiryDate: null
 plugins:
+  cp-field-inspect:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  dospaces:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   mix:
     edition: standard
     enabled: true
@@ -15,6 +23,19 @@ plugins:
     settings:
       assetPath: /
       publicPath: web
+  neo:
+    edition: standard
+    enabled: true
+    licenseKey: 3W7HCF8TID25XOX4F1AQ18UX
+    schemaVersion: 2.2.0
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  seomatic:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.8
   twigpack:
     edition: standard
     enabled: true
@@ -23,7 +44,7 @@ system:
   edition: pro
   live: true
   name: 'Craft Starter'
-  schemaVersion: 3.5.13
+  schemaVersion: 3.6.1
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false

@@ -4,7 +4,7 @@
 {% set mode = mode ?? 'crop' %}
 {% set class = class ?? '' %}
 
-{% if image.extension != 'gif' %}
+{# {% if image.extension != 'gif' %}
 	{% for view, size in sizes %}
 		{% set height = null %}
 		{% set width = size %}
@@ -12,9 +12,8 @@
 			{% set parts = size|split('x') %}
 			{% set width = parts[0] %}
 			{% set height = parts[1] %}
-		{% endif %}
-		{# *{{ width }}-{{ height }}* #}
-		{% if craft.imager.serverSupportsWebp() and craft.imager.clientSupportsWebp() %}
+		{% endif %} #}
+		{# {% if craft.imager.serverSupportsWebp() and craft.imager.clientSupportsWebp() %}
 
 			<source media="(max-width: {{ view }}px)" class="{{ class }} lazy" type="image/webp" data-srcset="{{ craft.imager.transformImage(image, { width: width, height: height, format: 'webp', }) }}, {{ craft.imager.transformImage(image, { width: (width * 2), height: (height != null) ? (height * 2) : null, format: 'webp', }) }} 2x">
 		{% endif %}
@@ -24,4 +23,4 @@
 	<img src="{{ craft.imager.transformImage(image, { width: 30, height: 20, }) }}" data-src="{{ craft.imager.transformImage(image, { width: width, height: height }) }}" width="{{ width }}" height="{{ height }}" class="{{ class }} lazy" alt="{{ alt }}" loading="lazy">
 {% else %}
 	<img src="{{ craft.imager.transformImage(image, { width: 30, height: 20 }) }}" data-src="{{ craft.imager.transformImage(image, { width: width, height: height }) }}" width="{{ width }}" height="{{ height }}" class="{{ class }} lazy" alt="{{ alt }}" loading="lazy">
-{% endif %}
+{% endif %} #}

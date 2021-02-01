@@ -1,12 +1,11 @@
 module.exports = {
-	purge: {
-		content: ['./templates/**/*.twig', './src/vue/**/*.vue']
-	},
-	// Overwrites theme elements
-	theme: {
-		// Adds to theme elements without overwriting them
-		extend: {},
-	},
-	variants: {},
-	plugins: [],
-};
+  purge: [ './templates/**/*.twig', './src/vue/**/*.vue' ],
+  darkMode: false, // or 'media' or 'class'
+  theme: {
+    extend: {},
+  },
+  variants: {
+    extend: {},
+  },
+  plugins: [],
+}
