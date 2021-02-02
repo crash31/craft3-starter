@@ -1,7 +1,8 @@
 {
-    "/js/main.js": "/js/main.js?id=1772fc16df6c892a5b59",
-    "/js/manifest.js": "/js/manifest.js?id=17b2a1f7dfabd15b922d",
-    "/js/main/helloWorld.js": "/js/main/helloWorld.js?id=d29af5e9f6eddca172f9",
-    "/css/main.css": "/css/main.css?id=7cce228a08265d7bca65",
-    "/js/vendor.js": "/js/vendor.js?id=e9d152de2431803e53f7"
+    "/js/util-lazyload-comp.js": "/js/util-lazyload-comp.js?id=547f90fc5813ebfc7056",
+    "/js/util-lazysizes.js": "/js/util-lazysizes.js?id=1f231d98039f9d2ff17b",
+    "/js/main.js": "/js/main.js?id=e4514eacd1a5675b4d26",
+    "/js/util-lazyload-comp/lazysizes.js": "/js/util-lazyload-comp/lazysizes.js?id=4ca85ac3a588e9f550a7",
+    "/js/util-lazyload-comp/helloWorld.js": "/js/util-lazyload-comp/helloWorld.js?id=51264ce2b5c1032d0064",
+    "/css/main.css": "/css/main.css?id=6e5f0bdded32cf61fe84"
 }

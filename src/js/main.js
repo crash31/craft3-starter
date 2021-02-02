@@ -1,12 +1,8 @@
 import App from "../vue/App.vue";
-
-// console.log('Loading javascript...')
+import { createApp } from 'vue';
 
 // App main
 const main = async() => {
-  // Async load the Vue 3 APIs we need rom the Vue ESM
-  const { createApp } = await import(/* webpackChunkName: "vue" */ 'vue');
-  
   // Create our vue instance
   const app = createApp(App);
 
@@ -22,11 +18,6 @@ main().then((root) => {
     setTimeout(function () {
       var app = document.getElementById('app');
       if (app) { app.style.opacity='1.0'; }
-    }, 500);
+    }, 100);
   }
 });
-
-// Accept HMR
-if(module.hot) {
-  module.hot.accept();
-}

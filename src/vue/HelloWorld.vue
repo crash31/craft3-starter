@@ -1,11 +1,13 @@
 <template>
-<div>
-  <p class="text-center text-green-500 font-bold tracking-wide">Vue is running!</p>
-</div>
+	<div>
+		<p class="font-bold tracking-wide text-center text-green-700">
+			Hello, World! Vue is running!
+		</p>
+	</div>
 </template>
 
 <script>
-export default {
-  name: "helloWorld"
-}
+	export default {
+		name: "helloWorld",
+	};
 </script>

@@ -13,6 +13,10 @@ mix
 	// 	}
 	// })
 	.setPublicPath("web")
+	// Load Utility JS
+	.js("src/js/utils/lazy-load-component.js", "web/js/util-lazyload-comp.js")
+	.js("src/js/utils/lazysizes-wrapper.js", "web/js/util-lazysizes.js")
+	// Load Main JS
 	.js("src/js/main.js", "web/js/main.js")
 	.vue()
 	.sourceMaps()
@@ -22,8 +26,11 @@ mix
 	.injectManifest({
 		swSrc: './src/js/service-worker.js'
 	})
-	.extract()
-	.version();
+	// .extract()
+
+if (mix.inProduction()) {
+	mix.version();
+}
 
 mix.browserSync({
 	proxy: process.env.MIX_PROXY_URL || 'https://craft3-starter.test',

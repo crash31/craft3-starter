@@ -52,14 +52,10 @@ Your tailwind config file should be `in addition to` and not `replicating` tailw
 
 [Color Shades Generator](https://javisperez.github.io/tailwindcolorshades/#/) will layout a gradient of colors legible for Tailwind's config file.
 
-# Alpine.js
-[Documentation](https://github.com/alpinejs/alpine)
+# Vue 3
+[Documentation](https://v3.vuejs.org/guide/introduction.html)
 
-Alpine.js offers you the reactive and declarative nature of big frameworks like Vue or React at a much lower cost.
-
-You get to keep your DOM, and sprinkle in behavior as you see fit.
-
-Think of it like Tailwind for JavaScript.
+Vue (pronounced /vjuː/, like view) is a progressive framework for building user interfaces. Unlike other monolithic frameworks, Vue is designed from the ground up to be incrementally adoptable. The core library is focused on the view layer only, and is easy to pick up and integrate with other libraries or existing projects. On the other hand, Vue is also perfectly capable of powering sophisticated Single-Page Applications when used in combination with [modern tooling](https://v3.vuejs.org/guide/single-file-component.html) and [supporting libraries](https://github.com/vuejs/awesome-vue#components--libraries)
 
 # Buddy config (buddy.crash31.com)
 **Sync Files Action**
@@ -69,16 +65,17 @@ Set ignore paths based on project requirements. A good default:
 /.git/
 .env
 /vendor/
-/public/.htaccess
-/public/imager/
-/public/content/
+/web/.htaccess
+/web/content/
 /storage/
 /node_modules/
 ```
 **SSH Commands**
 ```
-composer7.3-sp install
-./craft project-config/sync
+composer install
+php craft migrate/all
+php craft project-config/apply
 yarn install
 yarn run prod
+ln -s web public
 ```
