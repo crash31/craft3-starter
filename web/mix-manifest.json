@@ -1,8 +1,8 @@
 {
-    "/js/util-lazyload-comp.js": "/js/util-lazyload-comp.js?id=547f90fc5813ebfc7056",
-    "/js/util-lazysizes.js": "/js/util-lazysizes.js?id=1f231d98039f9d2ff17b",
-    "/js/main.js": "/js/main.js?id=e4514eacd1a5675b4d26",
-    "/js/util-lazyload-comp/lazysizes.js": "/js/util-lazyload-comp/lazysizes.js?id=4ca85ac3a588e9f550a7",
-    "/js/util-lazyload-comp/helloWorld.js": "/js/util-lazyload-comp/helloWorld.js?id=51264ce2b5c1032d0064",
-    "/css/main.css": "/css/main.css?id=6e5f0bdded32cf61fe84"
+    "/js/util-lazyload-comp.js": "/js/util-lazyload-comp.js",
+    "/js/util-lazysizes.js": "/js/util-lazysizes.js",
+    "/js/main.js": "/js/main.js",
+    "/js/util-lazyload-comp/lazysizes.js": "/js/util-lazyload-comp/lazysizes.js",
+    "/js/util-lazyload-comp/helloWorld.js": "/js/util-lazyload-comp/helloWorld.js",
+    "/css/main.css": "/css/main.css"
 }
