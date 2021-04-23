@@ -1,4 +1,4 @@
-dateModified: 1612207085
+dateModified: 1612536554
 email:
   fromEmail: developer@gotobig.com
   fromName: 'Craft Starter'
@@ -35,6 +35,7 @@ plugins:
   seomatic:
     edition: standard
     enabled: true
+    licenseKey: 083PTPRKKCLTORQIO3M1ONCS
     schemaVersion: 3.0.8
   twigpack:
     edition: standard
