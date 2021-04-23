@@ -1,8 +1,6 @@
 {
-    "/js/util-lazyload-comp.js": "/js/util-lazyload-comp.js",
-    "/js/util-lazysizes.js": "/js/util-lazysizes.js",
     "/js/main.js": "/js/main.js",
-    "/js/util-lazyload-comp/lazysizes.js": "/js/util-lazyload-comp/lazysizes.js",
-    "/js/util-lazyload-comp/helloWorld.js": "/js/util-lazyload-comp/helloWorld.js",
+    "/js/main/lazysizes.js": "/js/main/lazysizes.js",
+    "/js/main/helloWorld.js": "/js/main/helloWorld.js",
     "/css/main.css": "/css/main.css"
 }

@@ -1170,6 +1170,11 @@
   resolved "https://registry.yarnpkg.com/@types/svgo/-/svgo-1.3.5.tgz#18a0166fbcdfbfc7f17d0491da2ea07ee397d3f9"
   integrity sha512-y9Pw8IK50OqFRDpdI9Is29KlWiENVW9FDvlTmGHelvTfR2brYFJbsClvulZfeq6YKacFrDsG9a39w0kJZdHLaw==
 
+"@types/webpack-env@^1.16.0":
+  version "1.16.0"
+  resolved "https://registry.yarnpkg.com/@types/webpack-env/-/webpack-env-1.16.0.tgz#8c0a9435dfa7b3b1be76562f3070efb3f92637b4"
+  integrity sha512-Fx+NpfOO0CpeYX2g9bkvX8O5qh9wrU1sOF4g8sft4Mu7z+qfe387YlyY8w8daDyDsKY5vUxM0yxkAYnbkRbZEw==
+
 "@vue/compiler-core@3.0.11":
   version "3.0.11"
   resolved "https://registry.yarnpkg.com/@vue/compiler-core/-/compiler-core-3.0.11.tgz#5ef579e46d7b336b8735228758d1c2c505aae69a"
@@ -1189,7 +1194,7 @@
     "@vue/compiler-core" "3.0.11"
     "@vue/shared" "3.0.11"
 
-"@vue/compiler-sfc@^3.0.5":
+"@vue/compiler-sfc@^3.0.11":
   version "3.0.11"
   resolved "https://registry.yarnpkg.com/@vue/compiler-sfc/-/compiler-sfc-3.0.11.tgz#cd8ca2154b88967b521f5ad3b10f5f8b6b665679"
   integrity sha512-7fNiZuCecRleiyVGUWNa6pn8fB2fnuJU+3AGjbjl7r1P5wBivfl02H4pG+2aJP5gh2u+0wXov1W38tfWOphsXw==
@@ -4710,7 +4715,7 @@ laravel-mix-workbox@^0.1.4:
   resolved "https://registry.yarnpkg.com/laravel-mix-workbox/-/laravel-mix-workbox-0.1.4.tgz#9bdd2cb6b4ab75c5e5ac8eb7e43ca488f42b5559"
   integrity sha512-VWsWjLrOshJ8hP6zA5VGTl4uzh0w/AbL/jlOSMGF1QPqM1tP1s1OaXXP+a9VsXOoQoZuI+/BPysh4iWCsL5wLA==
 
-laravel-mix@^6.0.11:
+laravel-mix@^6.0.18:
   version "6.0.18"
   resolved "https://registry.yarnpkg.com/laravel-mix/-/laravel-mix-6.0.18.tgz#ce1ef5053e59a6ad611f787da181e337394e53aa"
   integrity sha512-OIyJFvpdyPRS6UWAbECwK1hRvba7VkH2wJIMWY8bButecpd+6Zde4/uKFDs/Up31jzOh8qPxObkamcsGxGq3jg==
@@ -7914,7 +7919,7 @@ vm-browserify@^1.0.1:
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
 
-vue-loader@^16.1.2:
+vue-loader@^16.2.0:
   version "16.2.0"
   resolved "https://registry.yarnpkg.com/vue-loader/-/vue-loader-16.2.0.tgz#046a53308dd47e58efe20ddec1edec027ce3b46e"
   integrity sha512-TitGhqSQ61RJljMmhIGvfWzJ2zk9m1Qug049Ugml6QP3t0e95o0XJjk29roNEiPKJQBEi8Ord5hFuSuELzSp8Q==
@@ -7939,7 +7944,7 @@ vue-template-compiler@^2.6.12:
     de-indent "^1.0.2"
     he "^1.1.0"
 
-vue@^3.0.5:
+vue@^3.0.11:
   version "3.0.11"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.0.11.tgz#c82f9594cbf4dcc869241d4c8dd3e08d9a8f4b5f"
   integrity sha512-3/eUi4InQz8MPzruHYSTQPxtM3LdZ1/S/BvaU021zBnZi0laRUyH6pfuE4wtUeLvI8wmUNwj5wrZFvbHUXL9dw==
