@@ -1,26 +1,88 @@
+{% set image = image ?? null %}
 {% set width = null %}
 {% set height = null %}
-{% set alt = alt ?? image.title %}
+{% set sizes = sizes ?? null %}
+{% set alt = alt ?? (image ? image.title : null) %}
 {% set mode = mode ?? 'crop' %}
+{% set position = position ?? 'center-center' %}
 {% set class = class ?? '' %}
+{% set id = id ?? '' %}
 
-{# {% if image.extension != 'gif' %}
-	{% for view, size in sizes %}
-		{% set height = null %}
-		{% set width = size %}
-		{% if 'x' in size %}
-			{% set parts = size|split('x') %}
-			{% set width = parts[0] %}
-			{% set height = parts[1] %}
-		{% endif %} #}
-		{# {% if craft.imager.serverSupportsWebp() and craft.imager.clientSupportsWebp() %}
+{% if image %}
+  {# Handle SVG assets #}
+  {% if image.extension == 'svg' %}
+    <span class="svg-wrap inline-block {{ class|length ? class : 'w-full h-auto' }}">{{ svg(image) }}</span>
+  {# General Image Handling #}
+  {% else %}
+    {% set class = class ~ ' lazyload' %}
 
-			<source media="(max-width: {{ view }}px)" class="{{ class }} lazy" type="image/webp" data-srcset="{{ craft.imager.transformImage(image, { width: width, height: height, format: 'webp', }) }}, {{ craft.imager.transformImage(image, { width: (width * 2), height: (height != null) ? (height * 2) : null, format: 'webp', }) }} 2x">
-		{% endif %}
+    {% set htmlAttributes = {
+      id: id,
+      alt: alt,
+      class: class,
+    } %}
 
-		<source class="{{ class }} lazy" {% if loop.first %} media="(max-width: {{ view }}px)" {% else %} media="(max-width: {{ view }}px)" {% endif %} data-srcset="{{ craft.imager.transformImage(image, { width: width, height: height, }) }}, {{ craft.imager.transformImage(image, { width: (width * 2), height: (height != null) ? (height * 2) : null, }) }} 2x">
-	{% endfor %}
-	<img src="{{ craft.imager.transformImage(image, { width: 30, height: 20, }) }}" data-src="{{ craft.imager.transformImage(image, { width: width, height: height }) }}" width="{{ width }}" height="{{ height }}" class="{{ class }} lazy" alt="{{ alt }}" loading="lazy">
+    {% if sizes %}
+      {% set common = {
+        mode: mode,
+        position: position,
+      } %}
+      {% set transforms = {} %}
+      {% for view, size in sizes %}
+        {% set breakpoint = '(max-width: ' ~ view ~ 'px)' %}
+
+        {% if 'x' in size %}
+          {% set parts = size|split('x') %}
+          {% set width = parts[0] %}
+          {% set height = parts[1] %}
+
+          {% set sizeObj = {
+            width: width,
+            height: height,
+          } %}
+        {% else %}
+          {% set width = size %}
+          {% set sizeObj = {
+            width: width,
+          } %}
+        {% endif %}
+        
+        {% if view < 450 %}
+          {% set transforms = { '(min-width:1px)': sizeObj }|merge(transforms) %}
+        {% else %}
+          {% set transforms = { '(min-width:500px)': sizeObj }|merge(transforms) %}
+        {% endif %}
+
+      {% endfor %}
+
+      {% set htmlAttributes = { width: width, height: height }|merge(htmlAttributes) %}
+
+      {# Load Image #}
+      {{ craft.images.pictureMedia(image, transforms, common, htmlAttributes) }}
+
+    {% else %}
+      {% if width or height %}
+        {% set transforms = {
+          width: width,
+          height: height,
+          mode: mode,
+        } %}
+
+        {% set htmlAttributes = { width: width, height: height }|merge(htmlAttributes) %}
+
+        {{ craft.images.picture(image, transforms, htmlAttributes) }}
+      {% endif %}
+    {% endif %}
+
+    
+
+  {% endif %}
+
 {% else %}
-	<img src="{{ craft.imager.transformImage(image, { width: 30, height: 20 }) }}" data-src="{{ craft.imager.transformImage(image, { width: width, height: height }) }}" width="{{ width }}" height="{{ height }}" class="{{ class }} lazy" alt="{{ alt }}" loading="lazy">
-{% endif %} #}
+  {% set width = 200 %}
+  {% set height = 200 %}
+  {{ craft.images.placeholder({
+		width: width,
+		height: height,
+	}) }}
+{% endif %}

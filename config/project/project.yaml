@@ -1,4 +1,4 @@
-dateModified: 1619188987
+dateModified: 1619547890
 email:
   fromEmail: developer@gotobig.com
   fromName: 'Craft Starter'
@@ -16,6 +16,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  image-toolbox:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   mix:
     edition: standard
     enabled: true
@@ -26,7 +30,7 @@ plugins:
   neo:
     edition: standard
     enabled: true
-    licenseKey: 3W7HCF8TID25XOX4F1AQ18UX
+    licenseKey: CF668M5WB7QZOVDZSCLR7WNE
     schemaVersion: 2.8.16
   redactor:
     edition: standard
@@ -35,7 +39,7 @@ plugins:
   seomatic:
     edition: standard
     enabled: true
-    licenseKey: 083PTPRKKCLTORQIO3M1ONCS
+    licenseKey: E1JKGK04EU4L7KNFTND8DZ5U
     schemaVersion: 3.0.9
   twigpack:
     edition: standard
