@@ -10,6 +10,7 @@ export default ({ command }) => ({
     rollupOptions: {
       input: {
         app: '/src/js/app.ts',
+        polyfillDynamicImport: 'vite/dynamic-import-polyfill',
       }
     },
   },
