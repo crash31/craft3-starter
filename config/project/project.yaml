@@ -1,4 +1,4 @@
-dateModified: 1619547890
+dateModified: 1620236412
 email:
   fromEmail: developer@gotobig.com
   fromName: 'Craft Starter'
@@ -22,7 +22,7 @@ plugins:
     schemaVersion: 1.0.0
   mix:
     edition: standard
-    enabled: true
+    enabled: false
     schemaVersion: 1.0.0
     settings:
       assetPath: /
@@ -42,6 +42,10 @@ plugins:
     licenseKey: E1JKGK04EU4L7KNFTND8DZ5U
     schemaVersion: 3.0.9
   twigpack:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  vite:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0

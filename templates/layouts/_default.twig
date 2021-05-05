@@ -9,7 +9,8 @@
                 transition: all 250ms;
             }
         </style>
-        <link rel="stylesheet" href="{{ mix('css/main.css') }}" media="none" onload="if(media!='all')media='all'">
+        {# <link rel="stylesheet" href="{{ mix('css/main.css') }}" media="none" onload="if(media!='all')media='all'"> #}
+        {{ craft.vite.script("/src/js/app.ts") }}
     </head>
     <body>
         <div id="app">
@@ -22,11 +23,11 @@
         {# <script defer type="text/javascript" src="{{ mix('js/manifest.js') }}"></script>
         <script defer type="text/javascript" src="{{ mix('js/vendor.js') }}"></script>
         <script defer type="text/javascript" src="{{ mix('js/main.js') }}"></script> #}
-        {{ craft.mix.withTag('js/manifest.js') | raw }}
+        {# {{ craft.mix.withTag('js/manifest.js') | raw }} #}
         {# {{ craft.mix.withTag('js/vendor.js') | raw }} #}
-        {{ craft.mix.withTag('js/util-lazyload-comp.js') | raw }}
+        {# {{ craft.mix.withTag('js/util-lazyload-comp.js') | raw }}
         {{ craft.mix.withTag('js/util-lazysizes.js') | raw }}
-        {{ craft.mix.withTag('js/main.js') | raw }}
+        {{ craft.mix.withTag('js/main.js') | raw }} #}
 
         <script>
             // Fall back for long page load
