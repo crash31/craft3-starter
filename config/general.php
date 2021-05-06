@@ -1,4 +1,5 @@
 <?php
+
 /**
  * General Configuration
  *
@@ -26,23 +27,7 @@ return [
         // Whether to save the project config out to config/project.yaml
         // (see https://docs.craftcms.com/v3/project-config.html)
         'useProjectConfigFile' => false,
-    ],
 
-    // Dev environment settings
-    'dev' => [
-        // Dev Mode (see https://craftcms.com/guides/what-dev-mode-does)
-        'devMode' => true,
-    ],
-
-    // Staging environment settings
-    'staging' => [
-        // Set this to `false` to prevent administrative changes from being made on staging
-        'allowAdminChanges' => false,
-    ],
-
-    // Production environment settings
-    'production' => [
-        // Set this to `false` to prevent administrative changes from being made on production
-        'allowAdminChanges' => false,
+        'devMode' => getenv('DEV_MODE')
     ],
 ];

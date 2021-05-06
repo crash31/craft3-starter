@@ -1,13 +1,10 @@
 import App from "../vue/App.vue";
 import { createApp } from 'vue';
-
+import 'lazysizes';
 
 
 // App main
 const main = async() => {
-  // Load lazysizes
-  const LazySizes = await import(/* webpackChunkName: "lazysizes" */ 'lazysizes');
-	LazySizes.init();
 
   // Create our vue instance
   const app = createApp(App);

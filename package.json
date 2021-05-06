@@ -35,7 +35,7 @@
 		"url": "https://github.com/crash31/craft3-starter/issues"
 	},
 	"scripts": {
-		"dev": "vite --https",
+		"dev": "vite",
 		"build": "vite build",
 		"serve": "vite preview"
 	},
@@ -53,6 +53,7 @@
 		"yargs": "^16.2.0"
 	},
 	"dependencies": {
+		"@vitejs/plugin-vue": "^1.2.2",
 		"autoprefixer": "^10.2.5",
 		"lazysizes": "^5.3.0",
 		"postcss-nested": "^5.0.1",

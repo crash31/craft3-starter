@@ -31,6 +31,7 @@ return [
    * @var bool Should the dev server be used?
    */
   'useDevServer' => App::env('DEV_MODE'),
+  // 'useDevServer' => true,
 
   /**
    * @var string File system path (or URL) to the Vite-built manifest.json
@@ -40,13 +41,13 @@ return [
   /**
    * @var string The public URL to the dev server (what appears in `<script src="">` tags
    */
-  'devServerPublic' => 'https://localhost:3000/',
+  'devServerPublic' => 'http://localhost:3000/',
 
   /**
    * @var string The internal URL to the dev server, when accessed from the environment in which PHP is executing
    *              This can be the same as `$devServerPublic`, but may be different in containerized or VM setups
    */
-  'devServerInternal' => App::env('PROXY_URL'),
+  'devServerInternal' => 'http://localhost:3000/',
 
   /**
    * @var string The public URL to use when not using the dev server
@@ -57,7 +58,7 @@ return [
    * @var string The JavaScript entry from the manifest.json to inject on Twig error pages
    *              This can be a string or an array of strings
    */
-  'errorEntry' => '',
+  'errorEntry' => '/src/js/app.ts',
 
   /**
    * @var string String to be appended to the cache key
