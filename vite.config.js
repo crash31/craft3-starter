@@ -11,7 +11,7 @@ export default ({ command }) => ({
     rollupOptions: {
       input: {
         app: '/src/js/app.ts',
-        polyfillDynamicImport: 'vite/dynamic-import-polyfill',
+        // polyfillDynamicImport: 'vite/dynamic-import-polyfill',
       }
     },
   },
@@ -26,6 +26,18 @@ export default ({ command }) => ({
     }),
     vue(),
   ],
+  server: {
+    host: '0.0.0.0',
+    https: true,
+  },
+  // server: {
+  //   https: true,
+  //   hmr: {
+  //     host: 'craft3-starter.test',
+  //     port: 3000,
+  //     protocol: 'wss'
+  //   }
+  // },
   resolve: {
     alias: {
       '@': '/src/',

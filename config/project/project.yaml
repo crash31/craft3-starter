@@ -1,4 +1,4 @@
-dateModified: 1620236412
+dateModified: 1622836456
 email:
   fromEmail: developer@gotobig.com
   fromName: 'Craft Starter'
@@ -31,7 +31,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: CF668M5WB7QZOVDZSCLR7WNE
-    schemaVersion: 2.8.16
+    schemaVersion: 2.9.11
   redactor:
     edition: standard
     enabled: true
